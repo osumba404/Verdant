@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verdant Co-Work | Premium Workspaces</title>
+  <title>Verdant Co-Work | Office Workspaces</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             verdant: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              200: '#bbf7d0',
-              300: '#86efac',
-              400: '#4ade80',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              800: '#166534',
-              900: '#14532d',
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            dark: {
+              50: '#f9fafb',
+              100: '#f3f4f6',
+              200: '#e5e7eb',
+              300: '#d1d5db',
+              400: '#9ca3af',
+              500: '#6b7280',
+              600: '#4b5563',
+              700: '#374151',
+              800: '#1f2937',
+              900: '#111827',
             }
           },
           animation: {
@@ -42,30 +55,30 @@
         }
       }
     }
-
   </script>
   <style>
-       body { 
+    body { 
       font-family: 'Poppins', sans-serif;
       scroll-behavior: smooth;
-      background: linear-gradient(120deg, #f0fdf4 0%, #dcfce7 100%);
+      background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
       min-height: 100vh;
+      color: #e5e7eb;
     }
     
     .glass-nav {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(17, 24, 39, 0.8);
       backdrop-filter: blur(12px) saturate(180%);
       -webkit-backdrop-filter: blur(12px) saturate(180%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
     
     .glass-nav.scrolled {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(17, 24, 39, 0.95);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(55, 65, 81, 0.6);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     }
     
     .nav-link {
@@ -81,7 +94,7 @@
       height: 2px;
       bottom: 0;
       left: 50%;
-      background: linear-gradient(90deg, #4ade80, #22c55e);
+      background: linear-gradient(90deg, #34d399, #10b981);
       transition: all 0.3s ease;
       transform: translateX(-50%);
       border-radius: 2px;
@@ -96,7 +109,7 @@
     }
     
     .logo-text {
-      background: linear-gradient(90deg, #166534, #22c55e, #86efac);
+      background: linear-gradient(90deg, #34d399, #10b981, #059669);
       background-size: 200% auto;
       background-clip: text;
       -webkit-background-clip: text;
@@ -105,8 +118,8 @@
     }
     
     .cta-button {
-      background: linear-gradient(90deg, #22c55e, #16a34a);
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+      background: linear-gradient(90deg, #10b981, #059669);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -119,7 +132,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: all 0.5s ease;
     }
     
@@ -129,15 +142,15 @@
     
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
     }
     
     .mobile-menu {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(17, 24, 39, 0.95);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(55, 65, 81, 0.6);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     
     .menu-icon {
@@ -145,14 +158,14 @@
     }
     
     .menu-icon:hover {
-      color: #22c55e;
+      color: #10b981;
       transform: rotate(90deg);
     }
     
-    /* Hero section for context */
+    /* Hero section */
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -166,9 +179,22 @@
       padding: 5rem 1.5rem;
     }
     
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 3rem 1rem;
+      }
+    }
+    
+    .feature-card {
+      background: rgba(31, 41, 55, 0.6);
+      border: 1px solid rgba(55, 65, 81, 0.5);
+      transition: all 0.3s ease;
+    }
+    
     .feature-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+      border-color: rgba(16, 185, 129, 0.3);
     }
     
     .testimonial-card {
@@ -180,8 +206,15 @@
       opacity: 1;
     }
     
+    .pricing-card {
+      background: rgba(31, 41, 55, 0.6);
+      border: 1px solid rgba(55, 65, 81, 0.5);
+      transition: all 0.3s ease;
+    }
+    
     .pricing-card:hover {
       transform: scale(1.03);
+      border-color: rgba(16, 185, 129, 0.3);
     }
     
     .nav-hidden {
@@ -220,9 +253,47 @@
     .delay-400 {
       animation-delay: 0.4s;
     }
+    
+    /* Improved mobile responsiveness */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .cta-buttons a {
+        width: 100%;
+      }
+      
+      .feature-grid, .spaces-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1f2937;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4b5563;
+    }
   </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900">
   <!-- Navigation -->
   <header class="fixed w-full z-50 transition-all duration-500" id="navbar">
     <nav class="glass-nav transition-all duration-500" id="nav">
@@ -235,18 +306,18 @@
           </div>
           
           <div class="hidden md:flex items-center space-x-6">
-            <a href="#home" class="nav-link text-gray-800 hover:text-verdant-600 font-medium">Home</a>
-            <a href="#features" class="nav-link text-gray-800 hover:text-verdant-600 font-medium">Features</a>
-            <a href="#spaces" class="nav-link text-gray-800 hover:text-verdant-600 font-medium">Spaces</a>
-            <a href="#pricing" class="nav-link text-gray-800 hover:text-verdant-600 font-medium">Pricing</a>
-            <a href="#testimonials" class="nav-link text-gray-800 hover:text-verdant-600 font-medium">Testimonials</a>
+            <a href="#home" class="nav-link text-gray-200 hover:text-verdant-400 font-medium">Home</a>
+            <a href="#features" class="nav-link text-gray-200 hover:text-verdant-400 font-medium">Features</a>
+            <a href="#spaces" class="nav-link text-gray-200 hover:text-verdant-400 font-medium">Spaces</a>
+            <a href="#pricing" class="nav-link text-gray-200 hover:text-verdant-400 font-medium">Pricing</a>
+            <a href="#testimonials" class="nav-link text-gray-200 hover:text-verdant-400 font-medium">Testimonials</a>
             <a href="#book" class="cta-button px-5 py-2.5 rounded-full text-white font-medium">
               Book a Tour
             </a>
           </div>
           
           <div class="md:hidden flex items-center">
-            <button id="mobile-menu-button" class="menu-icon text-gray-800">
+            <button id="mobile-menu-button" class="menu-icon text-gray-200">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
@@ -258,11 +329,11 @@
       <!-- Mobile menu -->
       <div class="md:hidden hidden mobile-menu rounded-b-2xl" id="mobile-menu">
         <div class="px-4 pt-2 pb-4 space-y-2">
-          <a href="#home" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-800 hover:text-verdant-600 hover:bg-verdant-50/50 transition-all">Home</a>
-          <a href="#features" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-800 hover:text-verdant-600 hover:bg-verdant-50/50 transition-all">Features</a>
-          <a href="#spaces" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-800 hover:text-verdant-600 hover:bg-verdant-50/50 transition-all">Spaces</a>
-          <a href="#pricing" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-800 hover:text-verdant-600 hover:bg-verdant-50/50 transition-all">Pricing</a>
-          <a href="#testimonials" class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:text-verdant-600 hover:bg-verdant-50/50 transition-all">Testimonials</a>
+          <a href="#home" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-200 hover:text-verdant-400 hover:bg-verdant-900/30 transition-all">Home</a>
+          <a href="#features" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-200 hover:text-verdant-400 hover:bg-verdant-900/30 transition-all">Features</a>
+          <a href="#spaces" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-200 hover:text-verdant-400 hover:bg-verdant-900/30 transition-all">Spaces</a>
+          <a href="#pricing" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-200 hover:text-verdant-400 hover:bg-verdant-900/30 transition-all">Pricing</a>
+          <a href="#testimonials" class="block px-4 py-3 rounded-xl text-base font-medium text-gray-200 hover:text-verdant-400 hover:bg-verdant-900/30 transition-all">Testimonials</a>
           <a href="#book" class="block px-4 py-3 rounded-xl text-base font-medium text-white bg-gradient-to-r from-verdant-500 to-verdant-600 hover:from-verdant-600 hover:to-verdant-700 transition-all mt-2 text-center">
             Book a Tour
           </a>
@@ -277,7 +348,7 @@
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80" alt="Co-working premium space" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
     </div>
 
     <!-- Hero Content -->
@@ -285,10 +356,10 @@
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg animate-fade-in-up">
         Work. Connect. <span class="bg-gradient-to-r from-verdant-400 via-emerald-500 to-lime-400 bg-clip-text text-transparent">Thrive</span>.
       </h1>
-      <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto animate-fade-in-up delay-100">
+      <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up delay-100">
         Experience a premium eco-inspired workspace designed for productivity, creativity, and community.
       </p>
-      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-200">
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 cta-buttons animate-fade-in-up delay-200">
         <a href="#book" class="px-6 py-3 rounded-full bg-gradient-to-r from-verdant-500 to-emerald-600 text-white font-semibold shadow-lg hover:shadow-verdant-200/30 hover:scale-105 transition-all duration-300 transform">
           Book a Tour
         </a>
@@ -309,88 +380,88 @@
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="section-padding bg-white">
+  <section id="features" class="section-padding bg-gray-900">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Designed for <span class="text-verdant-600">Productivity</span> & <span class="text-verdant-600">Wellbeing</span></h2>
-        <p class="mt-4 text-lg text-gray-600">Our spaces are thoughtfully designed to inspire creativity and foster collaboration</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Designed for <span class="text-verdant-400">Productivity</span> & <span class="text-verdant-400">Wellbeing</span></h2>
+        <p class="mt-4 text-lg text-gray-400">Our spaces are thoughtfully designed to inspire creativity and foster collaboration</p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 feature-grid">
         <!-- Feature 1 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-leaf text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Eco-Friendly Design</h3>
-          <p class="mt-2 text-gray-600">Sustainable materials, abundant plants, and energy-efficient systems create a healthy environment.</p>
+          <h3 class="text-xl font-semibold text-white">Eco-Friendly Design</h3>
+          <p class="mt-2 text-gray-400">Sustainable materials, abundant plants, and energy-efficient systems create a healthy environment.</p>
         </div>
         
         <!-- Feature 2 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-wifi text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-wifi text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">High-Speed Internet</h3>
-          <p class="mt-2 text-gray-600">Enterprise-grade fiber internet with redundant connections so you're always connected.</p>
+          <h3 class="text-xl font-semibold text-white">High-Speed Internet</h3>
+          <p class="mt-2 text-gray-400">Enterprise-grade fiber internet with redundant connections so you're always connected.</p>
         </div>
         
         <!-- Feature 3 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-coffee text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-coffee text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Premium Amenities</h3>
-          <p class="mt-2 text-gray-600">Artisanal coffee, healthy snacks, and relaxation areas to keep you refreshed throughout the day.</p>
+          <h3 class="text-xl font-semibold text-white">Premium Amenities</h3>
+          <p class="mt-2 text-gray-400">Artisanal coffee, healthy snacks, and relaxation areas to keep you refreshed throughout the day.</p>
         </div>
         
         <!-- Feature 4 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-users text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-users text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Vibrant Community</h3>
-          <p class="mt-2 text-gray-600">Network with professionals from diverse industries through our regular events and workshops.</p>
+          <h3 class="text-xl font-semibold text-white">Vibrant Community</h3>
+          <p class="mt-2 text-gray-400">Network with professionals from diverse industries through our regular events and workshops.</p>
         </div>
         
         <!-- Feature 5 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-desktop text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-desktop text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Tech-Enabled Rooms</h3>
-          <p class="mt-2 text-gray-600">Meeting rooms equipped with 4K displays, video conferencing, and smart whiteboards.</p>
+          <h3 class="text-xl font-semibold text-white">Tech-Enabled Rooms</h3>
+          <p class="mt-2 text-gray-400">Meeting rooms equipped with 4K displays, video conferencing, and smart whiteboards.</p>
         </div>
         
         <!-- Feature 6 -->
-        <div class="feature-card bg-gray-50 rounded-2xl p-6 transition-all duration-300 border border-gray-100">
-          <div class="w-14 h-14 rounded-xl bg-verdant-100 flex items-center justify-center mb-4">
-            <i class="fas fa-cloud-sun text-2xl text-verdant-600"></i>
+        <div class="feature-card rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-verdant-900/50 flex items-center justify-center mb-4">
+            <i class="fas fa-cloud-sun text-2xl text-verdant-400"></i>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Natural Lighting</h3>
-          <p class="mt-2 text-gray-600">Spaces flooded with natural light to boost mood, focus, and overall wellbeing.</p>
+          <h3 class="text-xl font-semibold text-white">Natural Lighting</h3>
+          <p class="mt-2 text-gray-400">Spaces flooded with natural light to boost mood, focus, and overall wellbeing.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Spaces Showcase -->
-  <section id="spaces" class="section-padding bg-gray-100">
+  <section id="spaces" class="section-padding bg-gray-800">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our <span class="text-verdant-600">Spaces</span></h2>
-        <p class="mt-4 text-lg text-gray-600">Flexible workspaces designed for different needs and working styles</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Our <span class="text-verdant-400">Spaces</span></h2>
+        <p class="mt-4 text-lg text-gray-400">Flexible workspaces designed for different needs and working styles</p>
       </div>
       
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 spaces-grid">
         <!-- Space 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Open workspace" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800">Open Workspace</h3>
-            <p class="mt-2 text-gray-600">Spacious, flexible seating with ergonomic chairs and ample power outlets.</p>
+            <h3 class="text-xl font-semibold text-white">Open Workspace</h3>
+            <p class="mt-2 text-gray-400">Spacious, flexible seating with ergonomic chairs and ample power outlets.</p>
             <div class="mt-4 flex items-center text-sm text-gray-500">
               <i class="fas fa-user-friends mr-1"></i>
               <span>100+ seats</span>
@@ -401,13 +472,13 @@
         </div>
         
         <!-- Space 2 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Private offices" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800">Private Offices</h3>
-            <p class="mt-2 text-gray-600">Fully furnished offices with locking doors for teams of 2-10 people.</p>
+            <h3 class="text-xl font-semibold text-white">Private Offices</h3>
+            <p class="mt-2 text-gray-400">Fully furnished offices with locking doors for teams of 2-10 people.</p>
             <div class="mt-4 flex items-center text-sm text-gray-500">
               <i class="fas fa-door-closed mr-1"></i>
               <span>Soundproof</span>
@@ -418,13 +489,13 @@
         </div>
         
         <!-- Space 3 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Meeting rooms" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800">Meeting Rooms</h3>
-            <p class="mt-2 text-gray-600">Professional spaces equipped with technology for presentations and collaboration.</p>
+            <h3 class="text-xl font-semibold text-white">Meeting Rooms</h3>
+            <p class="mt-2 text-gray-400">Professional spaces equipped with technology for presentations and collaboration.</p>
             <div class="mt-4 flex items-center text-sm text-gray-500">
               <i class="fas fa-video mr-1"></i>
               <span>Video conferencing</span>
@@ -435,13 +506,13 @@
         </div>
         
         <!-- Space 4 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+        <div class="bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1464&q=80" alt="Lounge areas" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800">Lounge Areas</h3>
-            <p class="mt-2 text-gray-600">Comfortable spaces for informal meetings, breaks, or working in a relaxed setting.</p>
+            <h3 class="text-xl font-semibold text-white">Lounge Areas</h3>
+            <p class="mt-2 text-gray-400">Comfortable spaces for informal meetings, breaks, or working in a relaxed setting.</p>
             <div class="mt-4 flex items-center text-sm text-gray-500">
               <i class="fas fa-couch mr-1"></i>
               <span>Comfortable seating</span>
@@ -455,70 +526,70 @@
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" class="section-padding bg-white">
+  <section id="pricing" class="section-padding bg-gray-900">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Flexible <span class="text-verdant-600">Membership</span> Plans</h2>
-        <p class="mt-4 text-lg text-gray-600">Choose the plan that works best for your work style and needs</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Flexible <span class="text-verdant-400">Membership</span> Plans</h2>
+        <p class="mt-4 text-lg text-gray-400">Choose the plan that works best for your work style and needs</p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pricing-grid">
         <!-- Plan 1 -->
-        <div class="pricing-card bg-white rounded-2xl border border-gray-200 p-6 transition-all duration-300">
-          <h3 class="text-xl font-semibold text-gray-800">Day Pass</h3>
+        <div class="pricing-card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-white">Day Pass</h3>
           <div class="mt-4">
-            <span class="text-4xl font-bold text-verdant-600">KES 4,000</span>
-            <span class="text-gray-600">/ day</span>
+            <span class="text-4xl font-bold text-verdant-400">KES 4,000</span>
+            <span class="text-gray-400">/ day</span>
           </div>
           <ul class="mt-6 space-y-3">
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">8 hours access</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">8 hours access</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">High-speed WiFi</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">High-speed WiFi</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Complimentary coffee & tea</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Complimentary coffee & tea</span>
             </li>
-            <li class="flex items-center text-gray-400">
+            <li class="flex items-center text-gray-600">
               <i class="fas fa-times mr-2"></i>
               <span>Meeting room access</span>
             </li>
           </ul>
-          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-100 text-gray-800 font-medium text-center hover:bg-verdant-100 hover:text-verdant-700 transition-colors">
+          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-800 text-gray-200 font-medium text-center hover:bg-verdant-900 hover:text-verdant-400 transition-colors">
             Get Started
           </a>
         </div>
         
         <!-- Plan 2 -->
-        <div class="pricing-card bg-white rounded-2xl border border-verdant-200 p-6 transition-all duration-300 shadow-md relative">
+        <div class="pricing-card rounded-2xl border-verdant-500/30 p-6 shadow-lg relative border-2">
           <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
             <span class="bg-verdant-500 text-white text-xs font-semibold px-3 py-1 rounded-full">POPULAR</span>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800">Flex Desk</h3>
+          <h3 class="text-xl font-semibold text-white">Flex Desk</h3>
           <div class="mt-4">
-            <span class="text-4xl font-bold text-verdant-600">KES 25,700</span>
-            <span class="text-gray-600">/ month</span>
+            <span class="text-4xl font-bold text-verdant-400">KES 25,700</span>
+            <span class="text-gray-400">/ month</span>
           </div>
           <ul class="mt-6 space-y-3">
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Unlimited access</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Unlimited access</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Any available desk</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Any available desk</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Meeting room credits</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Meeting room credits</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Lockers & storage</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Lockers & storage</span>
             </li>
           </ul>
           <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-verdant-500 text-white font-medium text-center hover:bg-verdant-600 transition-colors">
@@ -527,61 +598,61 @@
         </div>
         
         <!-- Plan 3 -->
-        <div class="pricing-card bg-white rounded-2xl border border-gray-200 p-6 transition-all duration-300">
-          <h3 class="text-xl font-semibold text-gray-800">Dedicated Desk</h3>
+        <div class="pricing-card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-white">Dedicated Desk</h3>
           <div class="mt-4">
-            <span class="text-4xl font-bold text-verdant-600">KES 45,000</span>
-            <span class="text-gray-600">/ month</span>
+            <span class="text-4xl font-bold text-verdant-400">KES 45,000</span>
+            <span class="text-gray-400">/ month</span>
           </div>
           <ul class="mt-6 space-y-3">
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Your own dedicated desk</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Your own dedicated desk</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">24/7 access</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">24/7 access</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Ergonomic chair</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Ergonomic chair</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Meeting room credits</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Meeting room credits</span>
             </li>
           </ul>
-          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-100 text-gray-800 font-medium text-center hover:bg-verdant-100 hover:text-verdant-700 transition-colors">
+          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-800 text-gray-200 font-medium text-center hover:bg-verdant-900 hover:text-verdant-400 transition-colors">
             Get Started
           </a>
         </div>
         
         <!-- Plan 4 -->
-        <div class="pricing-card bg-white rounded-2xl border border-gray-200 p-6 transition-all duration-300">
-          <h3 class="text-xl font-semibold text-gray-800">Private Office</h3>
+        <div class="pricing-card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-white">Private Office</h3>
           <div class="mt-4">
-            <span class="text-4xl font-bold text-verdant-600">KES 75,000</span>
-            <span class="text-gray-600">/ month</span>
+            <span class="text-4xl font-bold text-verdant-400">KES 75,000</span>
+            <span class="text-gray-400">/ month</span>
           </div>
           <ul class="mt-6 space-y-3">
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Fully furnished office</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Fully furnished office</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Customizable layout</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Customizable layout</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">24/7 access</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">24/7 access</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-check text-verdant-500 mr-2"></i>
-              <span class="text-gray-600">Meeting room included</span>
+              <i class="fas fa-check text-verdant-400 mr-2"></i>
+              <span class="text-gray-400">Meeting room included</span>
             </li>
           </ul>
-          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-100 text-gray-800 font-medium text-center hover:bg-verdant-100 hover:text-verdant-700 transition-colors">
+          <a href="#book" class="mt-8 block w-full py-3 rounded-full bg-gray-800 text-gray-200 font-medium text-center hover:bg-verdant-900 hover:text-verdant-400 transition-colors">
             Get Started
           </a>
         </div>
@@ -590,28 +661,28 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="section-padding bg-verdant-50">
+  <section id="testimonials" class="section-padding bg-gray-800">
     <div class="max-w-5xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What Our <span class="text-verdant-600">Members</span> Say</h2>
-        <p class="mt-4 text-lg text-gray-600">Hear from the professionals who call Verdant their workspace</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">What Our <span class="text-verdant-400">Members</span> Say</h2>
+        <p class="mt-4 text-lg text-gray-400">Hear from the professionals who call Verdant their workspace</p>
       </div>
       
       <div class="relative overflow-hidden">
         <div class="testimonial-carousel">
           <!-- Testimonial 1 -->
           <div class="testimonial-card active">
-            <div class="bg-white rounded-2xl p-8 shadow-md">
+            <div class="bg-gray-700 rounded-2xl p-8 shadow-lg">
               <div class="flex items-center mb-6">
                 <div class="w-16 h-16 rounded-full overflow-hidden">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Sarah Johnson" class="w-full h-full object-cover">
                 </div>
                 <div class="ml-4">
-                  <h4 class="font-semibold text-gray-800">Sarah Johnson</h4>
-                  <p class="text-verdant-600">Freelance Designer</p>
+                  <h4 class="font-semibold text-white">Sarah Johnson</h4>
+                  <p class="text-verdant-400">Freelance Designer</p>
                 </div>
               </div>
-              <p class="text-gray-600 italic">"Verdant has completely transformed how I work. The natural light and plant-filled spaces boost my creativity, and I've connected with so many amazing professionals here. It's more than just a workspace—it's a community."</p>
+              <p class="text-gray-300 italic">"Verdant has completely transformed how I work. The natural light and plant-filled spaces boost my creativity, and I've connected with so many amazing professionals here. It's more than just a workspace—it's a community."</p>
               <div class="mt-6 flex">
                 <i class="fas fa-star text-yellow-400"></i>
                 <i class="fas fa-star text-yellow-400"></i>
@@ -624,42 +695,42 @@
         </div>
         
         <div class="flex justify-center mt-8">
-          <button class="testimonial-nav w-3 h-3 rounded-full bg-verdant-300 mx-1"></button>
+          <button class="testimonial-nav w-3 h-3 rounded-full bg-verdant-600 mx-1"></button>
           <button class="testimonial-nav w-3 h-3 rounded-full bg-verdant-400 mx-1"></button>
-          <button class="testimonial-nav w-3 h-3 rounded-full bg-verdant-300 mx-1"></button>
+          <button class="testimonial-nav w-3 h-3 rounded-full bg-verdant-600 mx-1"></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section id="book" class="section-padding bg-gradient-to-r from-verdant-600 to-emerald-700 text-white">
+  <section id="book" class="section-padding bg-gradient-to-r from-verdant-700 to-emerald-800 text-white">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold">Ready to Transform Your Workday?</h2>
-      <p class="mt-4 text-lg text-verdant-100">Book a tour and experience the Verdant difference for yourself</p>
+      <p class="mt-4 text-lg text-verdant-200">Book a tour and experience the Verdant difference for yourself</p>
       
       <form class="mt-8 max-w-md mx-auto">
         <div class="flex flex-col sm:flex-row gap-4">
-          <input type="text" placeholder="Your Name" class="flex-grow px-4 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-verdant-300">
-          <input type="email" placeholder="Your Email" class="flex-grow px-4 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-verdant-300">
+          <input type="text" placeholder="Your Name" class="flex-grow px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-verdant-400">
+          <input type="email" placeholder="Your Email" class="flex-grow px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-verdant-400">
         </div>
         <button type="submit" class="mt-4 w-full px-6 py-3 rounded-full bg-white text-verdant-700 font-semibold hover:bg-gray-100 transition-colors">
           Schedule Your Tour
         </button>
       </form>
       
-      <p class="mt-6 text-verdant-200 text-sm">Or give us a call at <a href="tel:+254712345678" class="font-semibold underline">+2547 123 456 78</a></p>
+      <p class="mt-6 text-verdant-300 text-sm">Or give us a call at <a href="tel:+254712345678" class="font-semibold underline">+2547 123 456 78</a></p>
     </div>
   </section>
 
   <!-- Newsletter Section -->
-  <section class="py-16 bg-gray-100">
+  <section class="py-16 bg-gray-800">
     <div class="max-w-3xl mx-auto text-center px-4">
-      <h3 class="text-2xl font-bold text-gray-800">Stay in the Loop</h3>
-      <p class="mt-2 text-gray-600">Subscribe to our newsletter for updates on events, new locations, and special offers.</p>
+      <h3 class="text-2xl font-bold text-white">Stay in the Loop</h3>
+      <p class="mt-2 text-gray-400">Subscribe to our newsletter for updates on events, new locations, and special offers.</p>
       
       <form class="mt-6 flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-verdant-300 focus:border-transparent">
+        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-verdant-400 focus:border-transparent">
         <button type="submit" class="px-6 py-3 rounded-full bg-verdant-500 text-white font-medium hover:bg-verdant-600 transition-colors">
           Subscribe
         </button>
@@ -668,7 +739,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white pt-12 pb-8">
+  <footer class="bg-gray-900 text-white pt-12 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
@@ -722,7 +793,7 @@
         </div>
       </div>
       
-      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
         <p>© 2025 Verdant Co-Work. All rights reserved.</p>
       </div>
     </div>
@@ -757,8 +828,8 @@
     testimonialNavs.forEach((nav, index) => {
       nav.addEventListener('click', () => {
         // This would cycle through testimonials in a real implementation
-        document.querySelector('.testimonial-nav.bg-verdant-400').classList.replace('bg-verdant-400', 'bg-verdant-300');
-        nav.classList.replace('bg-verdant-300', 'bg-verdant-400');
+        document.querySelector('.testimonial-nav.bg-verdant-400').classList.replace('bg-verdant-400', 'bg-verdant-600');
+        nav.classList.replace('bg-verdant-600', 'bg-verdant-400');
       });
     });
     
